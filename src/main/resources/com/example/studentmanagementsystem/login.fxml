@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.studentmanagementsystem.LoginController"
+      style="-fx-padding: 40; -fx-alignment: center;">
+
+    <Label text="Student Management System"
+           style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+    <Label text="Username:"/>
+    <TextField fx:id="txtUsername" promptText="Enter username"/>
+    <Label text="Password:"/>
+    <PasswordField fx:id="txtPassword" promptText="Enter password"/>
+    <Button text="Login" onAction="#handleLogin"
+            style="-fx-pref-width: 200;"/>
+    <Label fx:id="lblError" style="-fx-text-fill: red;"/>
+</VBox>

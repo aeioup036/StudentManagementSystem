@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.studentmanagementsystem.Controller"
+      style="-fx-padding: 20;">
+
+    <HBox spacing="10">
+        <Label text="Name:"/>
+        <TextField fx:id="txtName" promptText="Enter Name"/>
+        <Label text="Course:"/>
+        <TextField fx:id="txtCourse" promptText="Enter Course"/>
+        <Label text="Year:"/>
+        <ChoiceBox fx:id="cbYear" prefWidth="120"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button text="Add" onAction="#addStudent"/>
+        <Button text="Update" onAction="#updateStudent"/>
+        <Button text="Delete" onAction="#deleteStudent"/>
+        <Button text="Clear" onAction="#clearFields"/>
+    </HBox>
+
+    <TableView fx:id="table" prefHeight="400">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="colName" text="Name" prefWidth="150"/>
+            <TableColumn fx:id="colCourse" text="Course" prefWidth="150"/>
+            <TableColumn fx:id="colYear" text="Year Level" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+</VBox>
